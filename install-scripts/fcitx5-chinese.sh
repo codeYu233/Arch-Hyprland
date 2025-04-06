@@ -35,7 +35,4 @@ for f in "${rog[@]}"; do
 install_package  "$f" "$LOG"
 done
 
-printf " Activating fcitx5-chinese services...\n"
-sudo fcitx5 --replace -d 2>&1 | tee -a "$LOG"
-
 printf "\n%.0s" {1..2}
