@@ -1,6 +1,4 @@
 #!/bin/bash
-# 💫 https://github.com/JaKooLit 💫 #
-# KooL Arch-Hyprland uninstall script #
 
 clear
 
@@ -22,15 +20,15 @@ RESET="$(tput sgr0)"
 
 printf "\n%.0s" {1..2}
 echo -e "\e[35m
-	╦╔═┌─┐┌─┐╦    ╦ ╦┬ ┬┌─┐┬─┐┬  ┌─┐┌┐┌┌┬┐
-	╠╩╗│ ││ │║    ╠═╣└┬┘├─┘├┬┘│  ├─┤│││ ││ UNINSTALL
-	╩ ╩└─┘└─┘╩═╝  ╩ ╩ ┴ ┴  ┴└─┴─┘┴ ┴┘└┘─┴┘ Arch Linux
+	╦ ╦┬ ┬┌─┐┬─┐┬  ┌─┐┌┐┌┌┬┐
+	╠═╣└┬┘├─┘├┬┘│  ├─┤│││ ││ UNINSTALL
+	╩ ╩ ┴ ┴  ┴└─┴─┘┴ ┴┘└┘─┴┘ Arch Linux
 \e[0m"
 printf "\n%.0s" {1..1}
 
 # Show welcome message using whiptail with Yes/No options
-whiptail --title "Arch-Hyprland KooL Dots Uninstall Script" --yesno \
-"Hello! This script will uninstall KooL Hyprland packages and configs.
+whiptail --title "Arch-Hyprland Dots Uninstall Script" --yesno \
+"Hello! This script will uninstall Hyprland packages and configs.
 
 You can choose packages and directories you want to remove.
 NOTE: This will remove configs from ~/.config
