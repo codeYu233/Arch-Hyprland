@@ -47,12 +47,6 @@ hypr_package=(
   yazi
   neofetch
   autojump
-  fcitx5
-  fcitx5-configtool
-  fcitx5-gtk
-  fcitx5-qt
-  fcitx5-rime
-  fcitx5-chinese-addons
   wallust 
   waybar
   wget
@@ -138,8 +132,17 @@ printf "\n%s - Installing ${SKY_BLUE}codeyu233's Hyprland necessary packages${RE
 
 for PKG1 in "${hypr_package[@]}" "${hypr_package_2[@]}" "${Extra[@]}"; do
   if [[ "$PKG1" == "lunarvim-git" || "$PKG1" == "wallust" ]]; then
-    printf "\n%s - Installing ${SKY_BLUE}$PKG1${RESET} using sudo pacman...\n" "${NOTE}"
-    paru -S --noconfirm "$PKG1" 2>&1 | tee -a "$LOG"
+    printf "\n%s - Installing ${SKY_BLUE}$PKG1${RESET} using AUR helper...\n" "${NOTE}"
+    
+    if command -v paru &> /dev/null; then
+      paru -S --noconfirm "$PKG1" 2>&1 | tee -a "$LOG"
+    elif command -v yay &> /dev/null; then
+      yay -S --noconfirm "$PKG1" 2>&1 | tee -a "$LOG"
+    else
+      echo -e "${ERROR} Failed to install $PKG1. Neither paru nor yay is available. Please install an AUR helper."
+      continue
+    fi
+
     if [ $? -ne 0 ]; then
       echo -e "${ERROR} Failed to install $PKG1. Please check the log."
     fi
