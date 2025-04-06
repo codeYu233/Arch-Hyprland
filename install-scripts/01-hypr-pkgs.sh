@@ -131,8 +131,21 @@ printf "\n%.0s" {1..1}
 # Installation of main components
 printf "\n%s - Installing ${SKY_BLUE}codeyu233's Hyprland necessary packages${RESET} .... \n" "${NOTE}"
 
+#for PKG1 in "${hypr_package[@]}" "${hypr_package_2[@]}" "${Extra[@]}"; do
+  #install_package "$PKG1" "$LOG"
+#done
+
+
 for PKG1 in "${hypr_package[@]}" "${hypr_package_2[@]}" "${Extra[@]}"; do
-  install_package "$PKG1" "$LOG"
+  if [[ "$PKG1" == "lunarvim-git" || "$PKG1" == "wallust" ]]; then
+    printf "\n%s - Installing ${SKY_BLUE}$PKG1${RESET} using sudo pacman...\n" "${NOTE}"
+    sudo pacman -S --noconfirm "$PKG1" 2>&1 | tee -a "$LOG"
+    if [ $? -ne 0 ]; then
+      echo -e "${ERROR} Failed to install $PKG1. Please check the log."
+    fi
+  else
+    install_package "$PKG1" "$LOG"
+  fi
 done
 
 printf "\n%.0s" {1..2}
