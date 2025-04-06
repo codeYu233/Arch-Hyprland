@@ -3,9 +3,10 @@
 ## Auto-install.sh for my archlinux-hyprland
 This repo contains an auto-install.sh and many install-scripts for apps that my arch-hyprland needed.
 
-## You just want the dotfiles?
 > [!CAUTION]
 > Attention! This is not my dotfile.
+
+## You just want the dotfiles?
 Click here [codeyu233's arch-dotfiles](https://github.com/codeYu233/Arch-dotfiles)
 
 ## How to use?
