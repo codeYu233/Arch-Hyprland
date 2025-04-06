@@ -41,6 +41,15 @@ hypr_package=(
   swaync 
   swww
   unzip # needed later
+  neovim
+  neovide
+  lunarvim
+  yazi
+  neofetch
+  autojump
+  fcitx5-im
+  fcitx5-chinese-addons
+  rime
   wallust 
   waybar
   wget
