@@ -26,13 +26,14 @@ fi
 
 
 # Set the name of the log file to include the current date and time
-LOG="Install-Logs/install-$(date +%d-%H%M%S)_rog.log"
+LOG="Install-Logs/install-$(date +%d-%H%M%S)_fcitx5.log"
 
 ### Install software for fcitx5-chinese ###
 
 printf " Installing ${SKY_BLUE}fcitx5-chinese packages${RESET}...\n"
 for f in "${rog[@]}"; do
 install_package  "$f" "$LOG"
+echo "$f has been installed!"
 done
 
 printf "\n%.0s" {1..2}
