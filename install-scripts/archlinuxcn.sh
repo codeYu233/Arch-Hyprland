@@ -9,14 +9,16 @@ else
     echo "It seems that the archlinuxcn repo is already added to your pacman.conf."
 fi
 
-# 更新软件包数据库
-echo "updating package database..."
-sudo pacman -Sy
-sudo paru -Sy
-sudo yay -Sy
+
 
 # install archlinuxcn-keyring
 echo "installing archlinuxcn-keyring...,it may take a while..."
-sudo pacman -S --noconfirm archlinuxcn-keyring
+sudo pacman -Sy --noconfirm archlinuxcn-keyring
+
+# 更新软件包数据库
+echo "updating package database..."
+sudo pacman -Sy
+paru -Sy
+yay -Sy
 
 echo "everything is done!"
