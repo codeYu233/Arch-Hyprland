@@ -43,13 +43,15 @@ hypr_package=(
   unzip # needed later
   neovim
   neovide
-  lunarvim
   yazi
   neofetch
   autojump
-  fcitx5-im
+  fcitx5
+  fcitx5-configtool
+  fcitx5-gtk
+  fcitx5-qt
+  fcitx5-rime
   fcitx5-chinese-addons
-  rime
   wallust 
   waybar
   wget
