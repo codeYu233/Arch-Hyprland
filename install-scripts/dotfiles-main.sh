@@ -25,7 +25,7 @@ if [ -d Hyprland-Dots ]; then
   chmod +x copy.sh
   ./copy.sh 
 else
-  if git clone --depth=1 https://github.com/codeyu233/Arch-dotfiles; then
+  if git clone --depth=1 https://github.com/codeyu233/Arch-dotfiles.git; then
     cd Arch-dotfiles || exit 1
     chmod +x copy.sh
     ./copy.sh 
