@@ -42,6 +42,7 @@ hypr_package=(
   swww
   unzip # needed later
   neovim
+  lunarvim-git
   neovide
   yazi
   neofetch
