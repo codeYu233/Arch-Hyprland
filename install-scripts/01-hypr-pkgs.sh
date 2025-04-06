@@ -131,7 +131,7 @@ printf "\n%s - Installing ${SKY_BLUE}codeyu233's Hyprland necessary packages${RE
 
 
 for PKG1 in "${hypr_package[@]}" "${hypr_package_2[@]}" "${Extra[@]}"; do
-  if [[ "$PKG1" == "lunarvim-git" || "$PKG1" == "wallust" ]]; then
+  if [[ "$PKG1" == "none" || "$PKG1" == "none" ]]; then
     printf "\n%s - Installing ${SKY_BLUE}$PKG1${RESET} using AUR helper...\n" "${NOTE}"
     
     if command -v paru &> /dev/null; then
