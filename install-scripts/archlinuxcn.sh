@@ -3,7 +3,7 @@
 # 添加archlinuxcn源到pacman.conf
 echo "adding the archlinuxcn repo..."
 if ! grep -q "\[archlinuxcn\]" /etc/pacman.conf; then
-    sudo bash -c 'echo -e "\n[archlinuxcn]\nServer = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch" >> /etc/pacman.conf'
+    sudo bash -c 'echo -e "\n[archlinuxcn]\nServer = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/\$arch" >> /etc/pacman.conf'
     echo "Done!"
 else
     echo "It seems that the archlinuxcn repo is already added to your pacman.conf."
