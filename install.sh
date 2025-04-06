@@ -131,6 +131,8 @@ xdph="OFF"
 zsh="OFF"
 pokemon="OFF"
 rog="OFF"
+fcitx5-chinese="OFF"
+archlinuxcn="OFF"
 dots="OFF"
 input_group="OFF"
 nvidia="OFF"
@@ -266,6 +268,8 @@ options_command+=(
     "zsh" "Install zsh shell with Oh-My-Zsh?" "OFF"
     "pokemon" "Add Pokemon color scripts to your terminal?" "OFF"
     "rog" "Are you installing on Asus ROG laptops?" "OFF"
+    "fcitx5-chinese" "Install fcitx5 and addons for Chinese input?" "OFF"
+    "archlinuxcn" "Add archlinuxcn repository?" "OFF"
     "dots" "Download and install pre-configured codeyu233's Hyprland dotfiles?" "OFF"
 )
 
@@ -431,6 +435,14 @@ for option in "${options[@]}"; do
         pokemon)
             echo "${INFO} Adding ${SKY_BLUE}Pokemon color scripts to terminal...${RESET}" | tee -a "$LOG"
             execute_script "zsh_pokemon.sh"
+            ;;
+        fcitx5-chinese)
+            echo "${INFO} Installing ${SKY_BLUE}fcitx5 and addons for Chinese input${RESET}(Recommend it to Chinese user)" | tee -a "$LOG"
+            execute_script "fcitx5-chinese.sh"
+            ;;
+        archlinuxcn)
+            echo "${INFO} Add ${SKY_BLUE}archlinuxcn repository${RESET}(Recommend it to Chinese user)" | tee -a "$LOG"
+            execute_script "archlinuxcn.sh"
             ;;
         rog)
             echo "${INFO} Installing ${SKY_BLUE}ROG laptop packages...${RESET}" | tee -a "$LOG"
