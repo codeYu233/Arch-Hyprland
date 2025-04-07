@@ -31,7 +31,7 @@ LOG="Install-Logs/install-$(date +%d-%H%M%S)_fcitx5.log"
 ### Install software for fcitx5-chinese ###
 
 printf " Installing ${SKY_BLUE}fcitx5-chinese packages${RESET}...\n"
-for f in "${rog[@]}"; do
+for f in "${fcitx[@]}"; do
 install_package  "$f" "$LOG"
 echo "$f has been installed!"
 done
