@@ -128,8 +128,7 @@ ags="OFF"
 sddm="OFF"
 sddm_theme="OFF"
 xdph="OFF"
-zsh="OFF"
-pokemon="OFF"
+fish="OFF"
 rog="OFF"
 fcitx5-chinese="OFF"
 archlinuxcn="OFF"
@@ -265,8 +264,7 @@ options_command+=(
     "thunar" "Do you want Thunar file manager to be installed?" "OFF"
     "ags" "Install AGS v1 for Desktop-Like Overview" "OFF"
     "xdph" "Install XDG-DESKTOP-PORTAL-HYPRLAND (for screen share)?" "OFF"
-    "zsh" "Install zsh shell with Oh-My-Zsh?" "OFF"
-    "pokemon" "Add Pokemon color scripts to your terminal?" "OFF"
+    "fish" "Install fish shell with Starship?" "OFF"
     "rog" "Are you installing on Asus ROG laptops?" "OFF"
     "fcitx5-chinese" "Install fcitx5 and addons for Chinese input?" "OFF"
     "archlinuxcn" "Add archlinuxcn repository?" "OFF"
@@ -428,13 +426,9 @@ for option in "${options[@]}"; do
             echo "${INFO} Downloading & Installing ${SKY_BLUE}Additional SDDM theme...${RESET}" | tee -a "$LOG"
             execute_script "sddm_theme.sh"
             ;;
-        zsh)
-            echo "${INFO} Installing ${SKY_BLUE}zsh with Oh-My-Zsh...${RESET}" | tee -a "$LOG"
-            execute_script "zsh.sh"
-            ;;
-        pokemon)
-            echo "${INFO} Adding ${SKY_BLUE}Pokemon color scripts to terminal...${RESET}" | tee -a "$LOG"
-            execute_script "zsh_pokemon.sh"
+        fish)
+            echo "${INFO} Installing ${SKY_BLUE}fish with Starship...${RESET}" | tee -a "$LOG"
+            execute_script "fish.sh"
             ;;
         fcitx5-chinese)
             echo "${INFO} Installing ${SKY_BLUE}fcitx5 and addons for Chinese input${RESET}(Recommend it to Chinese user)" | tee -a "$LOG"
